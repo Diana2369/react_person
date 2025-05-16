@@ -12,6 +12,7 @@ const misha = {
 const olya = {
   name: 'Olya',
   sex: 'f',
+  age: 31,
   isMarried: true,
   partnerName: 'Maksym',
 };
