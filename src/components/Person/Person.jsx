@@ -3,9 +3,13 @@ import React from 'react';
 export const Person = ({ person }) => {
   const { name, age, sex, isMarried, partnerName } = person;
 
-  const partnerText = isMarried
-    ? `${partnerName} is my ${sex === 'm' ? 'wife' : 'husband'}`
-    : 'I am not married';
+  let partnerText = 'I am not married';
+
+  if (isMarried) {
+    partnerText = sex === 'm'
+      ? `${partnerName} is my wife`
+      : `${partnerName} is my husband`;
+  }
 
   return (
     <section className="Person">
